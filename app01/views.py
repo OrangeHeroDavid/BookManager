@@ -42,7 +42,6 @@ def del_publisher(request):
     # 数据不存在给错误提示
     if not models.Publisher.objects.filter(pk=pk):
         return HttpResponse('数据不存在')
-
     # 数据库删除数据
     models.Publisher.objects.get(pk=pk).delete()
     # 返回到展示页面
@@ -61,7 +60,6 @@ def edit_publisher(request):
         return HttpResponse('数据不存在')
     # 数据存在
     obj = obj_list[0]
-
     if request.method == 'POST':
         # 获取提交的新的名字
         new_name = request.POST.get('new_name')
@@ -76,7 +74,6 @@ def edit_publisher(request):
             obj.save()  # 向数据库提交
             # 返回到展示页面
             return redirect('/publisher_list/')
-
     return render(request, 'edit_publisher.html', {'obj': obj, 'err_msg': err_msg})
 
 
@@ -84,7 +81,6 @@ def test(request):
     # 增加
     # obj = models.Publisher.objects.create(name='xx出版社')
     # print(obj)
-
     # 查询
     ret = models.Publisher.objects.filter(name='xx出版社')
     print(ret)
@@ -101,7 +97,6 @@ def book_list(request):
         print(i.publisher.pk, )  # 拿到出版社对象，再获取到ID
         print(i.publisher.name, )
         print('*' * 20)
-
     return render(request, 'book_list.html', {'all_books': all_books})
 
 
