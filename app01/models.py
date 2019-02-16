@@ -27,9 +27,6 @@ class Author(models.Model):
         return self.name
 
 
-
-
-
 # class Author_book(models.Model):
 #     author = models.ForeignKey('Author')
 #     book = models.ForeignKey('Book')
