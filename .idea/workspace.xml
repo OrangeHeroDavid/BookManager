@@ -53,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/BookManager/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="355">
-              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+              <caret line="53" column="10" lean-forward="true" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -239,12 +239,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543370520215</updated>
-      <workItem from="1550275467990" duration="15749000" />
+      <workItem from="1550275467990" duration="15774000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15749000" />
+    <option name="totallyTimeSpent" value="15774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="419" y="0" width="1508" height="1047" extended-state="0" />
@@ -484,7 +484,7 @@
     <entry file="file://$PROJECT_DIR$/BookManager/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
-          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+          <caret line="53" column="10" lean-forward="true" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
         </state>
       </provider>
     </entry>
