@@ -115,10 +115,8 @@ def add_book(request):
         # publisher_obj = models.Publisher.objects.get(pk=publisher_id)
         # models.Book.objects.create(title=new_name, publisher=publisher_obj)
         models.Book.objects.create(title=new_name, publisher_id=publisher_id)
-
         # 跳转到展示页面
         return redirect('/book_list/')
-
     # 获取到所有的出版社信息
     all_publishers = models.Publisher.objects.all()
     return render(request, 'add_book.html', {'all_publishers': all_publishers})
@@ -145,7 +143,6 @@ def edit_book(request):
         # 获取提交的数据
         new_name = request.POST.get('new_name')
         publisher_id = request.POST.get('publisher_id')
-
         # 修改数据
         book_obj.title = new_name
         book_obj.publisher_id = publisher_id
