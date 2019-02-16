@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>展示书籍列表</title>
+</head>
+<body>
+<a href="/add_book/">添加</a>
+<table border="1">
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>id</th>
+        <th>书名</th>
+        <th>出版社</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for book in all_books %}
+        <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ book.id }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.publisher.name }}</td>
+        <td>
+            <a href="/del_book/?pk={{ book.pk }}">删除</a>
+            <a href="/edit_book/?pk={{ book.pk }}">编辑</a>
+        </td>
+
+        </tr>
+
+    {% endfor %}
+
+
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -78,3 +78,83 @@ def edit_publisher(request):
             return redirect('/publisher_list/')
 
     return render(request, 'edit_publisher.html', {'obj': obj, 'err_msg': err_msg})
+
+
+def test(request):
+    # 增加
+    # obj = models.Publisher.objects.create(name='xx出版社')
+    # print(obj)
+
+    # 查询
+    ret = models.Publisher.objects.filter(name='xx出版社')
+    print(ret)
+    return HttpResponse('ok')
+
+
+# 展示书籍
+def book_list(request):
+    # 获取所有的书籍对象
+    all_books = models.Book.objects.all()
+    for i in all_books:
+        print(i.publisher, type(i.publisher))  # 出版社对象
+        print(i.publisher_id, )  # 直接从book表中获取到出版社的ID
+        print(i.publisher.pk, )  # 拿到出版社对象，再获取到ID
+        print(i.publisher.name, )
+        print('*' * 20)
+
+    return render(request, 'book_list.html', {'all_books': all_books})
+
+
+# 增加书籍
+def add_book(request):
+    if request.method == 'POST':
+        # 获取提交的数据
+        new_name = request.POST.get('new_name')
+        publisher_id = request.POST.get('publisher_id')
+        # 数据库插入数据
+        # publisher_obj = models.Publisher.objects.get(pk=publisher_id)
+        # models.Book.objects.create(title=new_name, publisher=publisher_obj)
+        models.Book.objects.create(title=new_name, publisher_id=publisher_id)
+
+        # 跳转到展示页面
+        return redirect('/book_list/')
+
+    # 获取到所有的出版社信息
+    all_publishers = models.Publisher.objects.all()
+    return render(request, 'add_book.html', {'all_publishers': all_publishers})
+
+
+# 删除书籍
+def del_book(request):
+    # 获取提交的数据pk
+    pk = request.GET.get('pk')
+    # 查询出对象进行删除
+    models.Book.objects.filter(pk=pk).delete()
+    # 跳转到展示页面
+    return redirect('/book_list/')
+
+
+# 编辑书籍
+def edit_book(request):
+    # 获取到要修改对象的id
+    pk = request.GET.get('pk')
+    # 查询出要修改的对象
+    book_obj = models.Book.objects.get(pk=pk)
+
+    if request.method == 'POST':
+        # 获取提交的数据
+        new_name = request.POST.get('new_name')
+        publisher_id = request.POST.get('publisher_id')
+
+        # 修改数据
+        book_obj.title = new_name
+        book_obj.publisher_id = publisher_id
+        # book_obj.publisher = models.Publisher.objects.get(pk=publisher_id)
+        book_obj.save()  # 保存到数据库中
+        # 跳转到展示页面
+        return redirect('/book_list/')
+
+    # 查询出所有的出版社对象
+    all_publishers = models.Publisher.objects.all()
+
+    return render(request, 'edit_book.html', {'book_obj': book_obj, 'all_publishers': all_publishers})

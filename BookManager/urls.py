@@ -27,4 +27,20 @@ urlpatterns = [
     # 编辑出版社
     url(r'^edit_publisher/', views.edit_publisher),
 
+    # 测试的url
+    url(r'^test/', views.test),
+
+    # 展示书籍
+    url(r'^book_list/', views.book_list),
+
+    # 增加书籍
+    url(r'^add_book/', views.add_book),
+
+    # 删除书籍
+    url(r'^del_book/', views.del_book),
+
+    # 编辑书籍
+    url(r'^edit_book/', views.edit_book),
+
+
 ]
