@@ -158,3 +158,79 @@ def edit_book(request):
     all_publishers = models.Publisher.objects.all()
 
     return render(request, 'edit_book.html', {'book_obj': book_obj, 'all_publishers': all_publishers})
+
+
+# 展示作者
+def author_list(request):
+    # 获取到所有的作者信息
+    all_authors = models.Author.objects.all().order_by('pk')
+    # for author in all_authors:
+    #     print(author)
+    #     print(author.name)
+    #     print(author.id)
+    #     print(author.books)          # 管理对象
+    #     print(author.books.all())    # 作者关联的所有书籍对象
+    #     print("*" * 30)
+
+    return render(request, 'author_list.html', {'all_authors': all_authors})
+
+
+# 增加作者
+def add_author(request):
+    if request.method == 'POST':
+        # 获取提交的数据
+        new_name = request.POST.get('name')
+        book_ids = request.POST.getlist('books')
+        # print(request.POST)
+        # print(new_name)
+        # print(book_ids)
+        # 数据插入到数据库中
+        # 创建一个新的作者
+        author_obj = models.Author.objects.create(name=new_name)
+        # 作者与书籍做多对多的关联
+        author_obj.books.set(book_ids)
+        return redirect('/author_list/')
+
+    # 获取所有的书籍的信息
+    all_books = models.Book.objects.all()
+    return render(request, 'add_author.html', {"books": all_books})
+
+
+# 删除作者
+def del_author(request):
+    # 从URL上获取要删除对象的ID
+    del_id = request.GET.get('pk')
+    # 删除对象
+    models.Author.objects.get(pk=del_id).delete()
+    # models.Author.objects.filter(pk=del_id).delete()
+    # 1. 删除了查询的对象
+    # 2. 删除了对象的多对多的记录
+
+    return redirect('/author_list/')
+
+
+# 编辑作者
+def edit_author(request):
+    # 获取要编辑的作者的ID
+    pk = request.GET.get('pk')
+    # 获取编辑的对象
+    author_obj = models.Author.objects.get(pk=pk)
+
+    if request.method == 'POST':
+        # 获取提交的数据
+        name = request.POST.get('name')
+        book_ids = request.POST.getlist('books')
+
+        # 修改数据
+        # 修改了作者名字
+        author_obj.name = name
+        author_obj.save()
+        # 修改作者和书籍多对多的关系
+        author_obj.books.set(book_ids)  # 所有的记录都重新设置   不需要save()
+
+        return redirect('/author_list/')
+
+    # 查询所有的书籍
+    books = models.Book.objects.all()
+
+    return render(request, 'edit_author.html', {'author_obj': author_obj, 'books': books})

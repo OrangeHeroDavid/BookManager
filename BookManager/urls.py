@@ -42,5 +42,15 @@ urlpatterns = [
     # 编辑书籍
     url(r'^edit_book/', views.edit_book),
 
+    # 展示作者
+    url(r'^author_list/', views.author_list),
 
+    # 增加作者
+    url(r'^add_author/', views.add_author),
+
+    # 删除作者
+    url(r'^del_author/', views.del_author),
+
+    # 编辑作者
+    url(r'^edit_author/', views.edit_author),
 ]
