@@ -156,7 +156,6 @@ def edit_book(request):
 
     # 查询出所有的出版社对象
     all_publishers = models.Publisher.objects.all()
-
     return render(request, 'edit_book.html', {'book_obj': book_obj, 'all_publishers': all_publishers})
 
 
@@ -171,7 +170,6 @@ def author_list(request):
     #     print(author.books)          # 管理对象
     #     print(author.books.all())    # 作者关联的所有书籍对象
     #     print("*" * 30)
-
     return render(request, 'author_list.html', {'all_authors': all_authors})
 
 
@@ -190,7 +188,6 @@ def add_author(request):
         # 作者与书籍做多对多的关联
         author_obj.books.set(book_ids)
         return redirect('/author_list/')
-
     # 获取所有的书籍的信息
     all_books = models.Book.objects.all()
     return render(request, 'add_author.html', {"books": all_books})
@@ -205,9 +202,7 @@ def del_author(request):
     # models.Author.objects.filter(pk=del_id).delete()
     # 1. 删除了查询的对象
     # 2. 删除了对象的多对多的记录
-
     return redirect('/author_list/')
-
 
 # 编辑作者
 def edit_author(request):
@@ -215,12 +210,10 @@ def edit_author(request):
     pk = request.GET.get('pk')
     # 获取编辑的对象
     author_obj = models.Author.objects.get(pk=pk)
-
     if request.method == 'POST':
         # 获取提交的数据
         name = request.POST.get('name')
         book_ids = request.POST.getlist('books')
-
         # 修改数据
         # 修改了作者名字
         author_obj.name = name
