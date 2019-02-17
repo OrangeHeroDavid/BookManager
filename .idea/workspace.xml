@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74106029-aa8e-43f4-bbd6-ed13ac61f6ca" name="Default" comment="" />
+    <list default="true" id="74106029-aa8e-43f4-bbd6-ed13ac61f6ca" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/templates/add_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add_book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/add_publisher.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add_publisher.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/book_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/book_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/edit_author.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/edit_author.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/publisher_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/publisher_list.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,23 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/add_author.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/add_book.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-              <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="432">
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -106,8 +100,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="605" />
-    <option name="width" value="1322" />
+    <option name="x" value="843" />
+    <option name="width" value="1084" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -195,8 +189,8 @@
       <recent name="E:\s16\new\BookManager\static" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\s16\new\BookManager\static\plugins" />
       <recent name="E:\s16\new\BookManager\templates" />
+      <recent name="E:\s16\new\BookManager\static\plugins" />
       <recent name="E:\s16\new\BookManager\app01" />
       <recent name="E:\s16\new\BookManager\BookManager" />
       <recent name="E:\s16\new\BookManager" />
@@ -250,18 +244,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543370520215</updated>
-      <workItem from="1550275467990" duration="20633000" />
+      <workItem from="1550275467990" duration="20936000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20633000" />
+    <option name="totallyTimeSpent" value="20936000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="605" y="0" width="1322" height="1047" extended-state="0" />
+    <frame x="843" y="0" width="1084" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2393027" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29492188" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -440,13 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/edit_author.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BookManager/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -488,13 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/add_author.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/add_book.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -502,6 +482,20 @@
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/edit_author.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_author.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
         </state>
       </provider>
     </entry>
