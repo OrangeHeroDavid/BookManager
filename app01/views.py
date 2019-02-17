@@ -1,12 +1,29 @@
 from django.shortcuts import render, HttpResponse, redirect
 from app01 import models
 
+import time
+
+
+def timer(func):
+    def inner(request, *args, **kwargs):
+        print(func)
+        print(*args, *kwargs)
+
+        start = time.time()
+        ret = func(request, *args, **kwargs)
+        end = time.time()
+        print('时间：{}'.format(end - start))
+        return ret
+
+    return inner
+
 
 # 展示出版社
+@timer  # publisher_list = timer(publisher_list)
 def publisher_list(request):
     # 从数据库获取所有出版社对象
     all_publisher = models.Publisher.objects.all().order_by('pid')
-    return render(request, 'publisher_list2.html', {'pubs': all_publisher,'name':'base.html'})
+    return render(request, 'publisher_list2.html', {'pubs': all_publisher, 'name': 'base.html'})
 
 
 # 增加出版社
@@ -33,6 +50,49 @@ def add_publisher(request):
             return redirect('/publisher_list/')
     # 返回一个提交数据的页面(form表单)
     return render(request, 'add_publisher.html', {'err_msg': err_msg, 'new_name': new_name})
+
+
+# 增加出版社 CBV
+from django.views import View
+from django.utils.decorators import method_decorator
+
+
+# @method_decorator(timer, name='post')
+# @method_decorator(timer, name='get')
+class AddPublisher(View):
+    # http_method_names = ['get']
+
+    # @method_decorator(timer)
+    @method_decorator(timer)
+    def dispatch(self, request, *args, **kwargs):
+        # 操作
+        # start = time.time()
+        ret = super().dispatch(request, *args, **kwargs)
+        # end = time.time()
+        # print('时间：{}'.format(end - start))
+        # 操作
+        return ret
+
+    # @method_decorator(timer)
+    def get(self, request):
+        print('get')
+        return render(request, 'add_publisher.html')
+
+    # @method_decorator(timer)
+    def post(self, request):
+
+        print('post')
+        err_msg = ''
+        new_name = request.POST.get('new_name')
+        if not new_name:
+            err_msg = '不能为空'
+        obj_list = models.Publisher.objects.filter(name=new_name)
+        if obj_list:
+            err_msg = '数据已存在'
+        if new_name and not obj_list:
+            ret = models.Publisher.objects.create(name=new_name)
+            return redirect('/publisher_list/')
+        return render(request, 'add_publisher.html', {'err_msg': err_msg, 'new_name': new_name})
 
 
 # 删除出版社

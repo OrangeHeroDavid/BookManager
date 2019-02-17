@@ -16,12 +16,15 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from app01 import views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # 展示出版社
-    url(r'^publisher_list/',views.publisher_list),
+    url(r'^publisher_list/', views.publisher_list),
     # 增加出版社
-    url(r'^add_publisher/', views.add_publisher),
+    # url(r'^add_publisher/', views.add_publisher),
+    url(r'^add_publisher/', views.AddPublisher.as_view()),
+    # url(r'^add_publisher/', view),
     # 删除出版社
     url(r'^del_publisher/', views.del_publisher),
     # 编辑出版社
