@@ -6,7 +6,7 @@ from app01 import models
 def publisher_list(request):
     # 从数据库获取所有出版社对象
     all_publisher = models.Publisher.objects.all().order_by('pid')
-    return render(request, 'publisher_list.html', {'pubs': all_publisher})
+    return render(request, 'publisher_list2.html', {'pubs': all_publisher,'name':'base.html'})
 
 
 # 增加出版社
@@ -42,6 +42,7 @@ def del_publisher(request):
     # 数据不存在给错误提示
     if not models.Publisher.objects.filter(pk=pk):
         return HttpResponse('数据不存在')
+
     # 数据库删除数据
     models.Publisher.objects.get(pk=pk).delete()
     # 返回到展示页面
@@ -60,6 +61,7 @@ def edit_publisher(request):
         return HttpResponse('数据不存在')
     # 数据存在
     obj = obj_list[0]
+
     if request.method == 'POST':
         # 获取提交的新的名字
         new_name = request.POST.get('new_name')
@@ -74,6 +76,7 @@ def edit_publisher(request):
             obj.save()  # 向数据库提交
             # 返回到展示页面
             return redirect('/publisher_list/')
+
     return render(request, 'edit_publisher.html', {'obj': obj, 'err_msg': err_msg})
 
 
@@ -81,6 +84,7 @@ def test(request):
     # 增加
     # obj = models.Publisher.objects.create(name='xx出版社')
     # print(obj)
+
     # 查询
     ret = models.Publisher.objects.filter(name='xx出版社')
     print(ret)
@@ -91,13 +95,17 @@ def test(request):
 def book_list(request):
     # 获取所有的书籍对象
     all_books = models.Book.objects.all()
-    for i in all_books:
-        print(i.publisher, type(i.publisher))  # 出版社对象
-        print(i.publisher_id, )  # 直接从book表中获取到出版社的ID
-        print(i.publisher.pk, )  # 拿到出版社对象，再获取到ID
-        print(i.publisher.name, )
+    for book in all_books:
+        # print(i.publisher, type(i.publisher))  # 出版社对象
+        # print(i.publisher_id, )  # 直接从book表中获取到出版社的ID
+        # print(i.publisher.pk, )  # 拿到出版社对象，再获取到ID
+        # print(i.publisher.name, )
+        print(book.author_set.all())
+        # print(author_obj.books.all())
+
         print('*' * 20)
-    return render(request, 'book_list.html', {'all_books': all_books})
+
+    return render(request, 'book_list2.html', {'all_books': all_books})
 
 
 # 增加书籍
@@ -110,8 +118,10 @@ def add_book(request):
         # publisher_obj = models.Publisher.objects.get(pk=publisher_id)
         # models.Book.objects.create(title=new_name, publisher=publisher_obj)
         models.Book.objects.create(title=new_name, publisher_id=publisher_id)
+
         # 跳转到展示页面
         return redirect('/book_list/')
+
     # 获取到所有的出版社信息
     all_publishers = models.Publisher.objects.all()
     return render(request, 'add_book.html', {'all_publishers': all_publishers})
@@ -138,6 +148,7 @@ def edit_book(request):
         # 获取提交的数据
         new_name = request.POST.get('new_name')
         publisher_id = request.POST.get('publisher_id')
+
         # 修改数据
         book_obj.title = new_name
         book_obj.publisher_id = publisher_id
@@ -148,6 +159,7 @@ def edit_book(request):
 
     # 查询出所有的出版社对象
     all_publishers = models.Publisher.objects.all()
+
     return render(request, 'edit_book.html', {'book_obj': book_obj, 'all_publishers': all_publishers})
 
 
@@ -162,7 +174,8 @@ def author_list(request):
     #     print(author.books)          # 管理对象
     #     print(author.books.all())    # 作者关联的所有书籍对象
     #     print("*" * 30)
-    return render(request, 'author_list.html', {'all_authors': all_authors})
+
+    return render(request, 'base.html', {'all_authors': all_authors})
 
 
 # 增加作者
@@ -180,6 +193,7 @@ def add_author(request):
         # 作者与书籍做多对多的关联
         author_obj.books.set(book_ids)
         return redirect('/author_list/')
+
     # 获取所有的书籍的信息
     all_books = models.Book.objects.all()
     return render(request, 'add_author.html', {"books": all_books})
@@ -194,7 +208,9 @@ def del_author(request):
     # models.Author.objects.filter(pk=del_id).delete()
     # 1. 删除了查询的对象
     # 2. 删除了对象的多对多的记录
+
     return redirect('/author_list/')
+
 
 # 编辑作者
 def edit_author(request):
@@ -202,10 +218,12 @@ def edit_author(request):
     pk = request.GET.get('pk')
     # 获取编辑的对象
     author_obj = models.Author.objects.get(pk=pk)
+
     if request.method == 'POST':
         # 获取提交的数据
         name = request.POST.get('name')
         book_ids = request.POST.getlist('books')
+
         # 修改数据
         # 修改了作者名字
         author_obj.name = name

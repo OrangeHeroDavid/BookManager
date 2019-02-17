@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作者列表</title>
+    {#    <link rel="stylesheet" href="/static/plugins/bootstrap-3.3.7/css/bootstrap.css">#}
+    {#    <link rel="stylesheet" href="/static/css/dsb.css">#}
+    {#    <link rel="stylesheet" href="/static/plugins/font-awesome-4.7.0/css/font-awesome.css">#}
+
+    {#    <link rel="stylesheet" href="{% static 'plugins/bootstrap-3.3.7/css/bootstrap.css' %}">#}
+    <link rel="stylesheet" href="{% get_static_prefix %}plugins/bootstrap-3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="{% static '/css/dsb.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.css' %}">
+
+
+    {% block css %}
+
+    {% endblock %}
+</head>
+<body>
+
+
+{% include 'nav.html' %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="{% block pub_active %} {% endblock %}"><a href="/publisher_list/">出版社列表 <span
+                        class="sr-only">(current)</span></a></li>
+                <li class="{% block book_active %} {% endblock %}"><a href="/book_list/">书籍列表</a></li>
+                <li class="{% block author_active %}active {% endblock %}"><a href="/author_list/"><i
+                        class="fa fa-bath fa-fw" aria-hidden="true"></i>作者列表</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+            {% block content %}
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">出版社展示</h3>
+                    </div>
+                    <div class="panel-body">
+                        <a class="btn btn-primary " href="/add_author/"><i class="fa fa-plus-circle fa-fw"
+                                                                           aria-hidden="true"></i>添加</a>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>id</th>
+                                    <th>名字</th>
+                                    <th>代表作</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                {% for author in all_authors %}
+                                    <tr>
+                                        <td>{{ forloop.counter }}</td>
+                                        <td>{{ author.pk }}</td>
+                                        <td>{{ author.name }}</td>
+                                        <td>
+                                            {% for book in  author.books.all %}
+                                                {% if forloop.last %}
+                                                    《{{ book.title }}》
+                                                {% else %}
+                                                    《{{ book.title }}》|
+                                                {% endif %}
+
+                                            {% endfor %}
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-danger btn-sm" href="/del_author/?pk={{ author.pk }}"><i
+                                                    class="fa fa-trash-o fa-fw" aria-hidden="true"></i> 删除</a>
+                                            <a class="btn btn-success btn-sm" href="/edit_author/?pk={{ author.pk }}"><i
+                                                    class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>编辑</a>
+                                        </td>
+
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+{#                {% include 'pagenation.html' %}#}
+
+                {% load my_tags %}
+                {% pagenation 10 5 %}
+            {% endblock %}
+
+
+
+        </div>
+    </div>
+</div>
+
+
+{% block js %}
+
+{% endblock %}
+
+</body>
+</html>

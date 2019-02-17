@@ -21,7 +21,7 @@ class Book(models.Model):
 class Author(models.Model):
     name = models.CharField(max_length=32, unique=True)  # 作者的名字
     books = models.ManyToManyField('Book')  # 表示作者和书籍 多对多的关系
-    # books = models.ManyToManyField('Book', through='Author_book')  # 表示作者和书籍 多对多的关系
+    # books = models.ManyToManyField('Book', through='Author_book',)  # 表示作者和书籍 多对多的关系
 
     def __str__(self):
         return self.name
