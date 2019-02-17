@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74106029-aa8e-43f4-bbd6-ed13ac61f6ca" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app01/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app01/templatetags/my_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/str和repr.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/book_list2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/nav.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pagenation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/publisher_list2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManager/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/BookManager/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app01/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app01/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/author_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/author_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/book_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/book_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/多个装饰器装饰同一个函数.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/装饰器.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/装饰器修复技术.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/装饰器进阶.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,16 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/str和repr.py">
+        <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="189">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -237,12 +222,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543370520215</updated>
-      <workItem from="1550275467990" duration="24368000" />
+      <workItem from="1550275467990" duration="25060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24368000" />
+    <option name="totallyTimeSpent" value="25060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="659" y="0" width="1268" height="1047" extended-state="0" />
@@ -495,13 +480,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/str和repr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
         </state>
       </provider>
     </entry>
