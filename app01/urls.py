@@ -6,13 +6,13 @@ urlpatterns = [
     # 删除功能三合一
     url(r'del_(publisher|book|author)/(\d+)/',views.delete),
 
-
+    # 展示出版社
     url(r'^publisher/', views.publisher_list, name='publisher'),
-
+    # 增加出版社
     url(r'^add_publisher/', views.add_publisher),
     # url(r'^add_publisher/', views.AddPublisher.as_view()),
     # url(r'^add_publisher/', view),
-
+    # 删除出版社
     url(r'^del_pub/(\d+)/', views.del_publisher, name='del_pub'),
     # 编辑出版社
     url(r'^edit_publisher/', views.edit_publisher),
