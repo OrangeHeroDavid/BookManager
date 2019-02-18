@@ -33,7 +33,7 @@ active
                             <td>{{ i.name }}</td>
                             <td>
                                 <a class="btn btn-success btn-sm" href="/edit_publisher/?pk={{ i.pk }}">编辑</a>
-                                <a class="btn btn-danger btn-sm" href="/del_publisher/?pk={{ i.pk }}">删除</a>
+                                <a class="btn btn-danger btn-sm" href="/del_publisher/{{ i.pk }}/">删除</a>
                             </td>
                         </tr>
                     {% endfor %}

@@ -1,6 +1,6 @@
 """BookManager URL Configuration
 
-The `urlpatterns` list routes URLs to views. For more information please see:
+The `urlpa.tterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
 Examples:
 Function views
@@ -19,5 +19,6 @@ from app01 import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', include('app01.urls'))
+    url(r'', include('app01.urls')),
+    # url(r'app02/',include('app02.urls'))
 ]

@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="{% block pub_active %} {% endblock %}"><a href="/publisher_list/">出版社列表 <span
+                <li class="{% block pub_active %} {% endblock %}"><a href="{% url 'publisher' %}">出版社列表 <span
                         class="sr-only">(current)</span></a></li>
                 <li class="{% block book_active %} {% endblock %}"><a href="/book_list/">书籍列表</a></li>
                 <li class="{% block author_active %}active {% endblock %}"><a href="/author_list/"><i
@@ -73,7 +73,7 @@
                                             {% endfor %}
                                         </td>
                                         <td>
-                                            <a class="btn btn-danger btn-sm" href="/del_author/?pk={{ author.pk }}"><i
+                                            <a class="btn btn-danger btn-sm" href="/del_author/{{ author.pk }}/"><i
                                                     class="fa fa-trash-o fa-fw" aria-hidden="true"></i> 删除</a>
                                             <a class="btn btn-success btn-sm" href="/edit_author/?pk={{ author.pk }}"><i
                                                     class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>编辑</a>

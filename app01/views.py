@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, HttpResponse, redirect, reverse
 from app01 import models
 
 import time
@@ -47,7 +47,7 @@ def add_publisher(request):
             # 向数据库插入数据
             ret = models.Publisher.objects.create(name=new_name)
             # 跳转到展示页面
-            return redirect('/publisher_list/')
+            return redirect(reverse('publisher'))  # /app01/publisher_list/
     # 返回一个提交数据的页面(form表单)
     return render(request, 'add_publisher.html', {'err_msg': err_msg, 'new_name': new_name})
 
@@ -96,9 +96,9 @@ class AddPublisher(View):
 
 
 # 删除出版社
-def del_publisher(request):
+def del_publisher(request, pk):
     # 获取要删除数据的id
-    pk = request.GET.get('pk')
+    # pk = request.GET.get('pk')
     # 数据不存在给错误提示
     if not models.Publisher.objects.filter(pk=pk):
         return HttpResponse('数据不存在')
@@ -106,7 +106,7 @@ def del_publisher(request):
     # 数据库删除数据
     models.Publisher.objects.get(pk=pk).delete()
     # 返回到展示页面
-    return redirect('/publisher_list/')
+    return redirect(reverse('publisher'))
 
 
 # 编辑出版社
@@ -297,3 +297,21 @@ def edit_author(request):
     books = models.Book.objects.all()
 
     return render(request, 'edit_author.html', {'author_obj': author_obj, 'books': books})
+
+
+# 删除
+from app01 import models
+
+
+def delete(request, table, pk, ):
+    # table ——》 ‘book’ 'publisher' 'author'   pk 要删除对象的ID
+    # table_dict = {
+    #     'book': models.Book,
+    #     'publisher': models.Publisher,
+    #     'author': models.Author,
+    # }
+    # table.capitalize()  大写 ‘book’ ——》  “Book”    getattr(models, 'Book') ——》 models.Book
+    table_class = getattr(models, table.capitalize())  # ‘Book’ 'Publisher'
+    table_class.objects.filter(pk=pk).delete()  # table_class ——》 models.Book
+
+    return redirect(reverse(table))  # 反向解析  ‘book’  ——》 ‘/book_list/’
