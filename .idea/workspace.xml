@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74106029-aa8e-43f4-bbd6-ed13ac61f6ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app01/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/author_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/author_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/book_list2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/book_list2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManager/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BookManager/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/publisher_list2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/publisher_list2.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,11 +53,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app01/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+            <state relative-caret-position="351">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BookManager/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -106,8 +113,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="666" />
-    <option name="width" value="1261" />
+    <option name="x" value="229" />
+    <option name="width" value="1698" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -162,8 +169,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\s16\new\BookManager\app01" />
       <recent name="E:\s16\new\BookManager" />
+      <recent name="E:\s16\new\BookManager\app01" />
       <recent name="E:\s16\new\BookManager\templates" />
       <recent name="E:\s16\new\BookManager\BookManager" />
       <recent name="E:\s16\new\BookManager\static\plugins" />
@@ -270,12 +277,12 @@
       <option name="presentableId" value="Default" />
       <updated>1543370520215</updated>
       <workItem from="1550275467990" duration="28268000" />
-      <workItem from="1550490617094" duration="8182000" />
+      <workItem from="1550490617094" duration="8223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36450000" />
+    <option name="totallyTimeSpent" value="36491000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="666" y="0" width="1261" height="1047" extended-state="0" />
@@ -548,16 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BookManager/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="e#646#686#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1863" />
@@ -596,8 +593,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app01/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        <state relative-caret-position="351">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookManager/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
         </state>
       </provider>
     </entry>
