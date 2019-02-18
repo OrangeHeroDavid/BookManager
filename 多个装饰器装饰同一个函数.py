@@ -14,7 +14,9 @@ def wrapper2(func):
         ret = func(*args, **kwargs)
         print('wrapper2 后')  # 5
         return ret
+
     return inner
+
 
 @wrapper2  # func1 = wrapper2(func1)  wrapper2.inner   func=wrapper1.inner
 @wrapper1  # func1 = wrapper1(func1)  wrapper1.inner   func=func1
