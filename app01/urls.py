@@ -4,7 +4,7 @@ from app01 import views
 urlpatterns = [
 
     # 删除功能三合一
-    url(r'del_(publisher|book|author)/(\d+)/',views.delete),
+    url(r'del_(publisher|book|author)/(\d+)/',views.delete,name='delete'),
 
 
     url(r'^publisher/', views.publisher_list, name='publisher'),

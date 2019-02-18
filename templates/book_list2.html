@@ -32,7 +32,7 @@ active
                                     <td>{{ book.title }}</td>
                                     <td>{{ book.publisher.name }}</td>
                                     <td>
-                                        <a class="btn btn-danger btn-sm" href="/del_book/{{ book.pk }}/">删除</a>
+                                        <a class="btn btn-danger btn-sm" href="{% url 'delete' 'book' book.pk %}">删除</a>
                                         <a class="btn btn-success btn-sm" href="/edit_book/?pk={{ book.pk }}">编辑</a>
                                     </td>
 
