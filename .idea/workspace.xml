@@ -73,11 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BookManager/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="e#646#686#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="202">
+              <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -271,12 +268,12 @@
       <option name="presentableId" value="Default" />
       <updated>1543370520215</updated>
       <workItem from="1550275467990" duration="28268000" />
-      <workItem from="1550490617094" duration="6537000" />
+      <workItem from="1550490617094" duration="6554000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34805000" />
+    <option name="totallyTimeSpent" value="34822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="789" y="0" width="1138" height="1047" extended-state="0" />
@@ -575,11 +572,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BookManager/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#646#686#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="202">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
         </state>
       </provider>
     </entry>
