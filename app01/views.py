@@ -26,19 +26,6 @@ def publisher_list(request):
     return render(request, 'publisher_list2.html', {'pubs': all_publisher, 'name': 'base.html'})
 
 
-# aaaaaaaaaaaaaaa
-# aaaaaaaaaaaaaaa
-# aaaaaaaaaaaaaaa
-# aaaaaaaaaaaaaaa
-# aaaaaaaaaaaaaaa
-# aaaaaaaaaaaaaaa
-# aaaaaaaaaaaaaaa
-# aaaaaaaaaaaaaaa
-# aaaaaaaaaaaaaaa
-
-
-
-
 # 增加出版社
 def add_publisher(request):
     # 定义err_msg,new_name
