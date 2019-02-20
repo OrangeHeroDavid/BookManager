@@ -26,7 +26,7 @@ def publisher_list(request):
     return render(request, 'publisher_list2.html', {'pubs': all_publisher, 'name': 'base.html'})
 
 
-
+# aaaaaaaaaaaaaaa
 
 
 
