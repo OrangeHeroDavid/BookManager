@@ -14,10 +14,7 @@ def timer(func):
         end = time.time()
         print('时间：{}'.format(end - start))
         return ret
-
     return inner
-
-
 # 展示出版社
 @timer  # publisher_list = timer(publisher_list)
 def publisher_list(request):
