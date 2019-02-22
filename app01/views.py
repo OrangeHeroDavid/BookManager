@@ -3,7 +3,6 @@ from app01 import models
 
 import time
 
-
 def timer(func):
     def inner(request, *args, **kwargs):
         print(func)
