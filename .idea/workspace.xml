@@ -54,15 +54,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/publisher_list2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app01/templatetags/my_tags.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -71,7 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BookManager/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="81">
@@ -81,19 +72,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/book_list2.html">
+        <entry file="file://$PROJECT_DIR$/templates/add_author.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="32" column="70" selection-start-line="32" selection-start-column="70" selection-end-line="32" selection-end-column="70" />
+            <state relative-caret-position="267">
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/author_list.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1917">
-              <caret line="71" column="60" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="60" />
+            <state relative-caret-position="297">
+              <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -159,27 +150,6 @@
             <path>
               <item name="BookManager" type="b2602c69:ProjectViewProjectNode" />
               <item name="BookManager" type="462c0819:PsiDirectoryNode" />
-              <item name="app01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BookManager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BookManager" type="462c0819:PsiDirectoryNode" />
-              <item name="app01" type="462c0819:PsiDirectoryNode" />
-              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BookManager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BookManager" type="462c0819:PsiDirectoryNode" />
-              <item name="BookManager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BookManager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BookManager" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BookManager" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BookManager" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -206,10 +176,10 @@
       <recent name="E:\s16\new\BookManager\static" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\s16\new\BookManager\BookManager" />
-      <recent name="E:\s16\new\BookManager\app01" />
       <recent name="E:\s16\new\BookManager" />
       <recent name="E:\s16\new\BookManager\templates" />
+      <recent name="E:\s16\new\BookManager\BookManager" />
+      <recent name="E:\s16\new\BookManager\app01" />
       <recent name="E:\s16\new\BookManager\static\plugins" />
     </key>
   </component>
@@ -315,12 +285,12 @@
       <workItem from="1550666342174" duration="819000" />
       <workItem from="1550791055378" duration="1169000" />
       <workItem from="1551182019145" duration="615000" />
-      <workItem from="1551189289008" duration="134000" />
+      <workItem from="1551189289008" duration="187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40635000" />
+    <option name="totallyTimeSpent" value="40688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="545" y="0" width="1382" height="1047" extended-state="0" />
@@ -538,13 +508,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/add_author.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/Python3.6.8/Lib/site-packages/django/views/generic/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -561,13 +524,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/nav.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -644,6 +600,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/add_author.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
