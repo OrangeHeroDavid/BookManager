@@ -157,9 +157,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="545" />
+    <option name="width" value="1382" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
