@@ -82,7 +82,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -281,12 +285,12 @@
       <workItem from="1550666342174" duration="819000" />
       <workItem from="1550791055378" duration="1169000" />
       <workItem from="1551182019145" duration="615000" />
-      <workItem from="1551189289008" duration="414000" />
+      <workItem from="1551189289008" duration="481000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40915000" />
+    <option name="totallyTimeSpent" value="40982000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="657" y="0" width="1270" height="1047" extended-state="0" />
@@ -297,7 +301,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2946331" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2946331" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -607,7 +611,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
