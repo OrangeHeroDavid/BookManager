@@ -3,6 +3,7 @@ from app01 import models
 
 import time
 
+
 def timer(func):
     def inner(request, *args, **kwargs):
         print(func)
@@ -13,13 +14,17 @@ def timer(func):
         end = time.time()
         print('时间：{}'.format(end - start))
         return ret
+
     return inner
+
+
 # 展示出版社
 @timer  # publisher_list = timer(publisher_list)
 def publisher_list(request):
     # 从数据库获取所有出版社对象
     all_publisher = models.Publisher.objects.all().order_by('pid')
     return render(request, 'publisher_list2.html', {'pubs': all_publisher, 'name': 'base.html'})
+
 
 # 增加出版社
 def add_publisher(request):
